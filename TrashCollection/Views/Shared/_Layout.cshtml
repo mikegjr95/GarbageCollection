@@ -21,9 +21,49 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>
+                        @if (User.IsInRole("Employee") == true)
+                        {
+                            @Html.ActionLink("Home", "TodaysPickups", "Employee")
+                        }
+                        else if (User.IsInRole("Customer") == true)
+                        {
+                            @Html.ActionLink("Home", "Details", "Customers")
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Home", "Index", "Home")
+                        }
+                    </li>
+                    <li>
+                        @if (User.IsInRole("Employee") == true)
+                        {
+                            @Html.ActionLink("Customers", "Index", "Employee")
+                        }
+                        else if (User.IsInRole("Customer") == true)
+                        {
+                            @Html.ActionLink("My Info", "Details", "Customers")
+                        }
+                        else
+                        {
+                            @Html.ActionLink("About", "About", "Home")
+                        }
+                    </li>
+
+                    <li>
+                        @if (User.IsInRole("Employee") == true)
+                        {
+                            @Html.ActionLink("Contact", "Contact", "Home")
+                        }
+                        else if (User.IsInRole("Customer") == true)
+                        {
+                            @Html.ActionLink("My Bill", "Index", "Customers")
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Contact", "Contact", "Home")
+                        }
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
