@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace TrashCollection.Models
 {
@@ -21,6 +22,6 @@ namespace TrashCollection.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         [Display(Name = "Your Designated Area Code")]
-        public int ZipCode { get; set; } 
+        public int ZipCode { get; set; }
     }
 }

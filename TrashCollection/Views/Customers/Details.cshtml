@@ -61,8 +61,55 @@
     </dl>
     <h4>To edit you're pickup info, please click link below!</h4>
 </div>
+
+<div>
+<h1>Pickup Info</h1>
+<hr />
+<dl class="dl-horizontal">
+
+    <dt>
+        @Html.DisplayNameFor(model => model.PickupDay)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.PickupDay)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.ExtraPickupDate)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.ExtraPickupDate)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.SuspendedStart)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.SuspendedStart)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.SuspendedEnd)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.SuspendedEnd)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.PickupConfirmation)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.PickupConfirmation)
+    </dd>
+</dl>
+<h4>To edit you're pickup info, please click link below!</h4>
+</div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to HomePage", "Index", "Home") |
-    @Html.ActionLink("Edit Pickup Info", "PickupInfo", new { id = Model.Id })
 </p>

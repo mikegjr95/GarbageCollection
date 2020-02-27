@@ -46,6 +46,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Dynamic, Version=1.2.2.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicLanguageRuntime.1.2.2\lib\net45\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting, Version=1.2.2.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicLanguageRuntime.1.2.2\lib\net45\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata, Version=1.2.2.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicLanguageRuntime.1.2.2\lib\net45\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -177,45 +186,51 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001071409240_InitialMigration.cs" />
-    <Compile Include="Migrations\202001071409240_InitialMigration.Designer.cs">
-      <DependentUpon>202001071409240_InitialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202002250150238_new.cs" />
+    <Compile Include="Migrations\202002250150238_new.Designer.cs">
+      <DependentUpon>202002250150238_new.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001071606210_keys.cs" />
-    <Compile Include="Migrations\202001071606210_keys.Designer.cs">
-      <DependentUpon>202001071606210_keys.cs</DependentUpon>
+    <Compile Include="Migrations\202002260103079_done.cs" />
+    <Compile Include="Migrations\202002260103079_done.Designer.cs">
+      <DependentUpon>202002260103079_done.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001072114290_new.cs" />
-    <Compile Include="Migrations\202001072114290_new.Designer.cs">
-      <DependentUpon>202001072114290_new.cs</DependentUpon>
+    <Compile Include="Migrations\202002261811207_prop.cs" />
+    <Compile Include="Migrations\202002261811207_prop.Designer.cs">
+      <DependentUpon>202002261811207_prop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001081456531_Newstuff.cs" />
-    <Compile Include="Migrations\202001081456531_Newstuff.Designer.cs">
-      <DependentUpon>202001081456531_Newstuff.cs</DependentUpon>
+    <Compile Include="Migrations\202002270227304_google.cs" />
+    <Compile Include="Migrations\202002270227304_google.Designer.cs">
+      <DependentUpon>202002270227304_google.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001081711435_yippeeeee.cs" />
-    <Compile Include="Migrations\202001081711435_yippeeeee.Designer.cs">
-      <DependentUpon>202001081711435_yippeeeee.cs</DependentUpon>
+    <Compile Include="Migrations\202002270235263_google2.cs" />
+    <Compile Include="Migrations\202002270235263_google2.Designer.cs">
+      <DependentUpon>202002270235263_google2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001081726242_jasf.cs" />
-    <Compile Include="Migrations\202001081726242_jasf.Designer.cs">
-      <DependentUpon>202001081726242_jasf.cs</DependentUpon>
+    <Compile Include="Migrations\202002270237543_google3.cs" />
+    <Compile Include="Migrations\202002270237543_google3.Designer.cs">
+      <DependentUpon>202002270237543_google3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001081727324_InitialMigration1.cs" />
-    <Compile Include="Migrations\202001081727324_InitialMigration1.Designer.cs">
-      <DependentUpon>202001081727324_InitialMigration1.cs</DependentUpon>
+    <Compile Include="Migrations\202002270248579_google4.cs" />
+    <Compile Include="Migrations\202002270248579_google4.Designer.cs">
+      <DependentUpon>202002270248579_google4.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001102153253_yipeeeee.cs" />
-    <Compile Include="Migrations\202001102153253_yipeeeee.Designer.cs">
-      <DependentUpon>202001102153253_yipeeeee.cs</DependentUpon>
+    <Compile Include="Migrations\202002270335176_no list.cs" />
+    <Compile Include="Migrations\202002270335176_no list.Designer.cs">
+      <DependentUpon>202002270335176_no list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002270342443_google5.cs" />
+    <Compile Include="Migrations\202002270342443_google5.Designer.cs">
+      <DependentUpon>202002270342443_google5.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\GeoCode.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\keyAttribute.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PrivateKeys.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -290,6 +305,7 @@
     <Content Include="Views\Customers\PickupInfo.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\ViewStart.cshtml" />
+    <Content Include="Views\Employee\CustomerLocation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -308,29 +324,32 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202001071409240_InitialMigration.resx">
-      <DependentUpon>202001071409240_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002250150238_new.resx">
+      <DependentUpon>202002250150238_new.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202001071606210_keys.resx">
-      <DependentUpon>202001071606210_keys.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002260103079_done.resx">
+      <DependentUpon>202002260103079_done.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202001072114290_new.resx">
-      <DependentUpon>202001072114290_new.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002261811207_prop.resx">
+      <DependentUpon>202002261811207_prop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202001081456531_Newstuff.resx">
-      <DependentUpon>202001081456531_Newstuff.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002270227304_google.resx">
+      <DependentUpon>202002270227304_google.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202001081711435_yippeeeee.resx">
-      <DependentUpon>202001081711435_yippeeeee.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002270235263_google2.resx">
+      <DependentUpon>202002270235263_google2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202001081726242_jasf.resx">
-      <DependentUpon>202001081726242_jasf.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002270237543_google3.resx">
+      <DependentUpon>202002270237543_google3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202001081727324_InitialMigration1.resx">
-      <DependentUpon>202001081727324_InitialMigration1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002270248579_google4.resx">
+      <DependentUpon>202002270248579_google4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202001102153253_yipeeeee.resx">
-      <DependentUpon>202001102153253_yipeeeee.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202002270335176_no list.resx">
+      <DependentUpon>202002270335176_no list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002270342443_google5.resx">
+      <DependentUpon>202002270342443_google5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

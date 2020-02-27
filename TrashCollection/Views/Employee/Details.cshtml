@@ -33,3 +33,15 @@
         <dd>
             @Html.DisplayFor(model => model.LastName)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ZipCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZipCode)
+        </dd>
+
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+            @Html.ActionLink("Back to HomePage", "Index", "Home") |
+        </p>

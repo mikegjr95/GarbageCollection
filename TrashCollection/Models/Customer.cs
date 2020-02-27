@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace TrashCollection.Models
 {
@@ -27,5 +29,13 @@ namespace TrashCollection.Models
         public DateTime SuspendedEnd { get; set; }
         public bool PickupConfirmation { get; set; }
 
+        public double Lat { get; set; }
+
+        public double Lng { get; set; }
+
+        public string apiMapCall = PrivateKeys.googleMap;
+
+       
     }
+
 }

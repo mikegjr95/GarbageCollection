@@ -80,7 +80,28 @@ namespace TrashCollection.Controllers
             var result = await SignInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
+
                 case SignInStatus.Success:
+                    var user = await UserManager.FindAsync(model.UserName, model.Password);
+                    var roles = await UserManager.GetRolesAsync(user.Id);
+                    if (roles.Contains("Customer"))
+                    {
+                        var customer = context.Customers.Where(u => u.ApplicationId == user.Id).FirstOrDefault();
+                        if (customer == null)
+                        {
+                            return RedirectToAction("Create", "Customers");/* //If they never made profile after registration then they must go to "Create", "Customer"*/
+                        }
+                        return RedirectToAction("Details", "Customers"); /*//Redirect to there profile "Index", "Customer"*/
+                    }
+                    else if (roles.Contains("Employee"))
+                    {
+                        var employee = context.Employees.Where(u => u.ApplicationId == user.Id).FirstOrDefault();
+                        if (employee == null)
+                        {
+                            return RedirectToAction("Create", "Employee");/* //If they never made profile after registration then they must go to "Create", "Musician"*/
+                        }
+                        return RedirectToAction("TodaysPickups", "Employee"); /*//Redirect to there List of todays pickups.*/
+                    }
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");

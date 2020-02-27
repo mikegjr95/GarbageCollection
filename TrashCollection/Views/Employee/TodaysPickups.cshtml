@@ -87,9 +87,9 @@
             @Html.DisplayFor(modelItem => item.PickupConfirmation)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", "Customers", new { id = item.Id }, null) |
+            @Html.ActionLink("Details", "Details", "Customers", new { id=item.Id }, null) |
+            @Html.ActionLink("Delete", "Delete","Customers", new { id=item.Id } , null)
         </td>
     </tr>
 }
